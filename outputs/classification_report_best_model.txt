@@ -1,0 +1,10 @@
+MODEL TERBAIK: XGBoost
+
+              precision    recall  f1-score   support
+
+      Normal       0.89      0.91      0.90        82
+       Sakit       0.93      0.91      0.92       102
+
+    accuracy                           0.91       184
+   macro avg       0.91      0.91      0.91       184
+weighted avg       0.91      0.91      0.91       184

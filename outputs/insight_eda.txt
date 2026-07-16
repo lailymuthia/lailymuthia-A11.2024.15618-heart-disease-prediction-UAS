@@ -1,0 +1,27 @@
+
+5 INSIGHT UTAMA HASIL EDA
+==========================
+1. KETIDAKSEIMBANGAN KELAS RINGAN
+   Distribusi target: Normal 44.7% vs Heart Disease 55.3%
+   (rasio 1.24:1). Perlu evaluasi dengan F1-score, bukan hanya akurasi.
+
+2. NILAI 0 TIDAK WAJAR SECARA KLINIS
+   Cholesterol=0 pada 172 baris (18.7%) dan
+   RestingBP=0 pada 1 baris. Nilai ini mustahil secara medis dan
+   diperlakukan sebagai data hilang tersembunyi -> perlu imputasi.
+
+3. FITUR PALING BERKORELASI DENGAN TARGET
+   Korelasi tertinggi terhadap HeartDisease: Oldpeak (0.40),
+   diikuti MaxHR (-0.40) dan Age (0.28).
+   MaxHR berkorelasi negatif -> semakin rendah detak jantung maksimal, semakin
+   tinggi risiko penyakit jantung.
+
+4. ST_SLOPE DAN CHEST PAIN TYPE SANGAT DISKRIMINATIF
+   Pasien dengan ST_Slope 'Flat' dan ChestPainType 'ASY' (asymptomatic)
+   menunjukkan proporsi HeartDisease jauh lebih tinggi dibanding kategori lain,
+   menjadikannya fitur kategorikal paling prediktif.
+
+5. TIDAK ADA MULTIKOLINEARITAS EKSTREM
+   Tidak ditemukan pasangan fitur numerik dengan korelasi > 0.8, sehingga
+   seluruh fitur numerik aman digunakan bersama tanpa reduksi dimensi (PCA)
+   pada tahap awal modelling.

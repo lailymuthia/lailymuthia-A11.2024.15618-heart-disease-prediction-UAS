@@ -1,0 +1,4 @@
+,best_params,cv_best_f1,val_f1,val_accuracy
+RandomForest,"{'clf__max_depth': 5, 'clf__min_samples_leaf': 2, 'clf__min_samples_split': 5, 'clf__n_estimators': 300}",0.8782139558901552,0.8316831683168316,0.8152173913043478
+XGBoost,"{'clf__learning_rate': 0.1, 'clf__max_depth': 3, 'clf__n_estimators': 100, 'clf__subsample': 0.8}",0.8867680708014556,0.8867924528301887,0.8695652173913043
+SVM,"{'clf__C': 1, 'clf__gamma': 'auto', 'clf__kernel': 'rbf'}",0.8778833575343008,0.8431372549019608,0.8260869565217391
